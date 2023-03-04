@@ -7,10 +7,10 @@ Pytorch Implementation of [Towards Attack-tolerant Federated Learning via Critic
 ## Highlight ##
 1. We empirically show that benign local models in federated learning exhibit similar patterns in the way parameter importance changes during training. When com-
 pared to the medium-ranked parameters, the top and bottom parameters had smaller rank order disruptions.
-<p align="center"><img src="./figure/observation.PNG" width = 600> </center>
+<p align="center"><img src="./figure/observation.PNG"> </center>
 
 2. Based on data observation that holds over non-IID cases, we present a new metric for measuring model similarity that extends beyond the extant Euclidean-based similarity. With this measure, FedCPA can efficiently assess the normality of each local update, enabling attack-tolerant aggregation.
-<p align="center"><img src="./figure/qualitative.png" width = 600> </center>
+<p align="center"><img src="./figure/qualitative.PNG"> </center>
 
 ## Usage ##
 ```
