@@ -1,5 +1,5 @@
 # FedCPA: Towards Attack-tolerant Federated Learning via Critical Parameter Analysis
-Pytorch Implementation of [Towards Attack-tolerant Federated Learning via Critical Parameter Analysis]
+Pytorch Implementation of "Towards Attack-tolerant Federated Learning via Critical Parameter Analysis"
 
 
 
@@ -10,7 +10,7 @@ pared to the medium-ranked parameters, the top and bottom parameters had smaller
 <p align="center"><img src="./figure/observation.PNG"> </center>
 
 2. Based on data observation that holds over non-IID cases, we present a new metric for measuring model similarity that extends beyond the extant Euclidean-based similarity. With this measure, FedCPA can efficiently assess the normality of each local update, enabling attack-tolerant aggregation.
-<p align="center"><img src="./figure/qualitative.PNG"> </center>
+<p align="center"><img src="./figure/qualitative.PNG" width=700> </center>
 
 ## Usage ##
 ```
