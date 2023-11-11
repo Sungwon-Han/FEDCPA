@@ -12,6 +12,14 @@ pared to the medium-ranked parameters, the top and bottom parameters had smaller
 2. Based on data observation that holds over non-IID cases, we present a new metric for measuring model similarity that extends beyond the extant Euclidean-based similarity. With this measure, FedCPA can efficiently assess the normality of each local update, enabling attack-tolerant aggregation.
 <p align="center"><img src="./figure/qualitative.PNG" width=700> </center>
 
+## Required packages ##
+- torch==1.9.0
+- torchvision==0.10.0
+- scikit-learn==0.24.2
+- scipy==1.3.0
+- numpy==1.19.2
+- geom-median==0.1.0
+
 ## Usage ##
 ```
 usage: main_untargeted_attack.py [-h] [--dataset DATASET] [--net_config NET_CONFIG] [--partition PARTITION]
@@ -78,3 +86,28 @@ optional arguments:
                         
 ```
 
+## To run the experiment with FedCPA ##
+Targeted/Untargeted attack experiments on the CIFAR-10 dataset with 20 clients and a 20% attacker's ratio.  
+```
+python main_targeted_attack.py --dataset cifar10 --n_parties 20 --attacker_ratio 0.2 --global_defense cpa
+python main_untargeted_attack.py --dataset cifar10 --n_parties 20 --attacker_ratio 0.2 --global_defense cpa
+```
+
+## To run the experiment with other baseline defense strategies ##
+Simply change the argument of "global_defense" with the strategies that you want.  
+Available baseline strategies = \[average, median, krum, foolsgold, residual (Residual base), trimmed_mean, norm (Norm bound), rfa\]  
+e.g., Targeted attack experiments with krum
+```
+python main_targeted_attack.py --dataset cifar10 --n_parties 20 --attacker_ratio 0.2 --global_defense krum
+```
+## Citation ##
+If you find this repo useful for your research, please consider citing our paper:
+```
+@inproceedings{han2023towards,
+  title={Towards Attack-tolerant Federated Learning via Critical Parameter Analysis},
+  author={Han, Sungwon and Park, Sungwon and Wu, Fangzhao and Kim, Sundong and Zhu, Bin and Xie, Xing and Cha, Meeyoung},
+  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
+  pages={4999--5008},
+  year={2023}
+}
+```
