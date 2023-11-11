@@ -12,14 +12,6 @@ pared to the medium-ranked parameters, the top and bottom parameters had smaller
 2. Based on data observation that holds over non-IID cases, we present a new metric for measuring model similarity that extends beyond the extant Euclidean-based similarity. With this measure, FedCPA can efficiently assess the normality of each local update, enabling attack-tolerant aggregation.
 <p align="center"><img src="./figure/qualitative.PNG" width=700> </center>
 
-## Required packages ##
-- torch==1.9.0
-- torchvision==0.10.0
-- scikit-learn==0.24.2
-- scipy==1.3.0
-- numpy==1.19.2
-- geom-median==0.1.0
-
 ## Usage ##
 ```
 usage: main_untargeted_attack.py [-h] [--dataset DATASET] [--net_config NET_CONFIG] [--partition PARTITION]
