@@ -466,7 +466,6 @@ def global_aggregation(nets_this_round, args, fed_avg_freqs, global_w, party_lis
 
                 global_score[i]= (topk_corr_dist + bottomk_corr_dist) / 2 + (topk_jaccard_dist + bottomk_jaccard_dist) / 2
                 
-        remove_num = int(len(nets_this_round) * 0.8)
         total_score = np.mean(pairwise_score, axis=1) + global_score
         
         update_mean, update_std, update_cat, global_weight = get_update_static(nets_this_round, global_model)
